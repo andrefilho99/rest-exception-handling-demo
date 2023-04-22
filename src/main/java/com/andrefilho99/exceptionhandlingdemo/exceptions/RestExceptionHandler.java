@@ -15,7 +15,7 @@ public class RestExceptionHandler {
     @ExceptionHandler(PostNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     @ResponseBody
-    public ErrorResponse handleNotFoundException(HttpServletRequest request, PostNotFoundException ex) {
+    public ErrorResponse handlePostNotFoundException(HttpServletRequest request, PostNotFoundException ex) {
         return ErrorResponse
                 .builder()
                 .timestamp(new Date())
@@ -28,7 +28,7 @@ public class RestExceptionHandler {
     @ExceptionHandler(LongMessageException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ResponseBody
-    public ErrorResponse handleNotFoundException(HttpServletRequest request, LongMessageException ex) {
+    public ErrorResponse handleLongMessageException(HttpServletRequest request, LongMessageException ex) {
         return ErrorResponse
                 .builder()
                 .timestamp(new Date())
